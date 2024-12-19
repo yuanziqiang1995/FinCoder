@@ -21,6 +21,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\coder\FinCoder" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -33,10 +39,21 @@
       <option name="presentableId" value="Default" />
       <updated>1733969165762</updated>
       <workItem from="1733969171147" duration="651000" />
+      <workItem from="1734573066430" duration="1859000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="782" y="342" key="SettingsEditor" timestamp="1734573877516">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="782" y="342" key="SettingsEditor/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1734573877516" />
+    <state x="965" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1734573821867">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="965" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1734573821867" />
   </component>
 </project>
