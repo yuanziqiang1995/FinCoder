@@ -9,17 +9,25 @@ from typing import Dict, Any
 import argparse
 from collections import Counter
 
+
 os.environ['HTTP_PROXY'] = '127.0.0.1:7890'
 os.environ['HTTPS_PROXY'] = '127.0.0.1:7890'
-openai.api_key = 'sk-1g9KDtl8cfzV1Bbz3aB4Ea6dA696415eBf1aC044A8Cc8671'
-openai.api_base = "https://apikeyplus.com/v1"
+
+
+
 parser = argparse.ArgumentParser()
-parser.add_argument("--key", default='sk-1g9KDtl8cfzV1Bbz3aB4Ea6dA696415eBf1aC044A8Cc8671', type=str)
+parser.add_argument("--key", default='sk-wDzxPXsOAAHaTSLUriUdNSTVIU8srmMRiiKoCg3wC2s42ytj', type=str)
+parser.add_argument("--api", default='https://xiaoai.plus/v1', type=str)
+parser.add_argument("--model", default='gpt-4-turbo', type=str)
 parser.add_argument("--start", default=0, type=int)
+parser.add_argument("--input", default="", type=str)
 parser.add_argument("--greedy", default=True, action='store_true')
 parser.add_argument("--dry_run", default=False, action='store_true')
 parser.add_argument("--end", default=-1, type=int)
 args = parser.parse_args()
+
+openai.api_key = args.key
+openai.api_base = args.api
 
 def create_reader_request_processed(example: Dict[str, Any]):
     prompt = 'The Calculation Process is a program that can be used to answer question. Please define the numerical values in the Calculation Process in Python format. The variable names should reflect the meaning of the numerical values in the original text or table.\n'
@@ -237,7 +245,7 @@ if __name__ == "__main__":
                         logprobs=1
                     )'''
                     result = openai.ChatCompletion.create(
-                        model='gpt-4o',
+                        model=args.model,
                         messages=[{"role": "user", "content": full_prompt}],
                         # api_key=os.getenv(args.key),
                         # max_tokens=512,
@@ -256,7 +264,7 @@ if __name__ == "__main__":
             while not got_result:
                 try:
                     result = openai.ChatCompletion.create(
-                        model='gpt-3.5-turbo',
+                        model=args.model,
                         messages=[{"role": "user", "content": full_prompt}],
                         # api_key=os.getenv(args.key),
                         # max_tokens=512,
