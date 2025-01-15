@@ -186,7 +186,7 @@ if __name__ == "__main__":
         id_c.append(e['id'])
         example_new.append(e)
     print("num:", len(example_new))
-    save_dict_list_to_json(example_new, "finqa_train7.json")
+    #save_dict_list_to_json(example_new, "finqa_train7.json")
 
     for e in example_new:
         e['generated'][0] = remove_comment(e['generated'][0])

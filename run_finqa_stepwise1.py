@@ -20,7 +20,7 @@ parser.add_argument("--key", default='sk-wDzxPXsOAAHaTSLUriUdNSTVIU8srmMRiiKoCg3
 parser.add_argument("--api", default='https://xiaoai.plus/v1', type=str)
 parser.add_argument("--model", default='gpt-4-turbo', type=str)
 parser.add_argument("--start", default=0, type=int)
-parser.add_argument("--input", default="", type=str)
+parser.add_argument("--input", default="data/finqa/finqa_gold_wocode.json", type=str)
 parser.add_argument("--greedy", default=True, action='store_true')
 parser.add_argument("--dry_run", default=False, action='store_true')
 parser.add_argument("--end", default=-1, type=int)
@@ -205,7 +205,7 @@ ans = percent_change_in_total_conduit_assets
 """
 #current 396
 if __name__ == "__main__":
-    with open('data/finqa/finqa_gold_wocode.json') as f:
+    with open(args.input) as f:
         finqa_dev = json.load(f)
     finqa_dev = finqa_dev[args.start:]
     now = datetime.now()
