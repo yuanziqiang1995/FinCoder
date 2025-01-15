@@ -1,5 +1,13 @@
 import json
 from tqdm import tqdm
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input", default='finqa_train.json', type=str)
+parser.add_argument("--output", default='finqa_train_wocode.json', type=str)
+args = parser.parse_args()
+
 operations_dict = {
     'add': '+',
     'subtract': '-',
@@ -112,7 +120,7 @@ def convert_finqa_example(finqa, qa):
     return {"question": question, "text": text, "table": table, "answer": answer, "program": program, "id": id, "gold": gold}
 
 
-with open('finqa_train.json') as f:
+with open(args.input) as f:
     finqa_dev = json.load(f)
 res = []
 for example in tqdm(finqa_dev):
@@ -129,5 +137,5 @@ for example in tqdm(finqa_dev):
     except Exception as e:
         print(example['id'])
 
-with open('finqa_gold_wocode.json', 'w', encoding='utf-8') as f:
+with open(args.output, 'w', encoding='utf-8') as f:
     json.dump(res, f, ensure_ascii=False, indent=4)

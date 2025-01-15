@@ -29,7 +29,29 @@
       <recent name="E:\coder\FinCoder\data\finqa" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.preprocess">
+    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinCoder" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data/finqa" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/finqa/preprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="run_finqa_stepwise1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinCoder" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.preprocess" />
         <item itemvalue="Python.run_finqa_stepwise1" />
       </list>
     </recent_temporary>
@@ -70,7 +93,7 @@
       <updated>1733969165762</updated>
       <workItem from="1733969171147" duration="651000" />
       <workItem from="1734573066430" duration="3168000" />
-      <workItem from="1736231342689" duration="6306000" />
+      <workItem from="1736231342689" duration="9835000" />
     </task>
     <servers />
   </component>
@@ -78,22 +101,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1736239982039">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1736950593282">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1736239982039" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1736239982038">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1736950593282" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1736950593282">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1736239982038" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1736239982037">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1736950593282" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1736950593282">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1736239982037" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1736239982039">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1736950593282" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1736950593282">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1736239982039" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1736950593282" />
     <state x="782" y="342" key="SettingsEditor" timestamp="1734573877516">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -104,6 +131,7 @@
     <state x="965" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1734573821867" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FinCoder$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1736950567972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/finqa" />
     <SUITE FILE_PATH="coverage/FinCoder$run_finqa_stepwise1.coverage" NAME="run_finqa_stepwise1 Coverage Results" MODIFIED="1736239982031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
