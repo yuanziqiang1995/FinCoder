@@ -20,11 +20,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/finetune" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\coder\FinCoder\finetune" />
       <recent name="E:\coder\FinCoder" />
       <recent name="E:\coder\FinCoder\data\finqa" />
     </key>
@@ -93,7 +94,7 @@
       <updated>1733969165762</updated>
       <workItem from="1733969171147" duration="651000" />
       <workItem from="1734573066430" duration="3168000" />
-      <workItem from="1736231342689" duration="12548000" />
+      <workItem from="1736231342689" duration="14896000" />
     </task>
     <servers />
   </component>
@@ -129,6 +130,17 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="965" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/3840.0.1920.1040@0.0.2560.1400" timestamp="1734573821867" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finetune/finetune.py</url>
+          <line>198</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FinCoder$preprocess.coverage" NAME="preprocess Coverage Results" MODIFIED="1736950567972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/finqa" />

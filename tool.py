@@ -8,6 +8,7 @@ from sympy import simplify
 import numpy as np
 import cvxpy as cp
 import statistics
+import json
 
 
 def get_precision(gt_ans: float) -> int:
@@ -168,3 +169,26 @@ def synthesize_program(result: str, prefix: str) -> str:
                 break
     program += 'ans = solver()'    
     return program
+
+def save_dict_list_to_json(dict_list, file_name):
+    """
+    将字典列表保存为JSON文件
+
+    参数:
+    dict_list (list): 字典列表
+    file_name (str): 要保存的文件名
+
+    返回:
+    bool: True表示保存成功，False表示保存失败
+    """
+    try:
+        # 将字典列表转换为JSON格式的字符串
+        json_string = json.dumps(dict_list, indent=4)
+        # 将JSON字符串写入文件
+        with open(file_name, 'w') as file:
+            file.write(json_string)
+        return True
+    except Exception as e:
+        print(f"保存JSON文件时出错: {e}")
+        return False
+#parse_api_result(example,question)

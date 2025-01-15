@@ -62,4 +62,17 @@ python run_finqa_stepwise2.py \
 ```
  The method for organizing the output JSONL files is also the same as in step1.
 ## Fine-tuning
+```shell script
+cd finetune
+python finetune.py
+```
+Due to the numerous parameters involved, settings for the parameters need to be configured within the code. Model/data parameters, 
+training hyperparameters, and LoRA hyperparameters can be adjusted either in the main function or
+by directly modifying the default parameters defined in the train function.
+
 ## Test
+
+In the test setup, configure parameters such as weights, test file paths, and others, then proceed to run the test.
+```shell script
+python finqa_test.py
+```

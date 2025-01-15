@@ -8,9 +8,12 @@ import transformers
 from datasets import load_dataset
 import json
 from tqdm import tqdm
-
+import argparse
 import random
 os.environ["WANDB_DISABLED"] = "true"
+
+
+
 """
 Unused imports:
 import torch.nn as nn
@@ -92,7 +95,7 @@ def train(
     base_model: str = "/root/autodl-tmp/llama3-8b",  # Please specify a --base_model, e.g. --base_model='decapoda-research/llama-7b-hf'
     data_path: str = "/root/autodl-tmp/finetune/data/cft-gpt4-1.json",
     output_dir: str = "./finllms_tatqa",
-    
+    data_type: str = "mix", # mix \ finqa\ tatqa \ convfinqa
     # training hyperparams
     batch_size: int = 40,
     micro_batch_size: int = 1,
@@ -190,16 +193,21 @@ def train(
         return result
 
     def generate_and_tokenize_prompt(data_point):
-        
-        if data_point['dataset'] == 'finqa':
+        if data_type == 'mix':
+            if data_point['dataset'] == 'finqa':
+                ins = create_reader_request_processed_finqa(data_point)
+            elif data_point['dataset'] == 'convfinqa':
+                ins = create_reader_request_processed_convfinqa(data_point)
+            elif data_point['dataset'] == 'tatqa':
+                ins = create_reader_request_processed_tatqa(data_point)
+            else:
+                ins = create_reader_request_processed_finqa(data_point)
+        elif data_type == 'finqa':
             ins = create_reader_request_processed_finqa(data_point)
-        elif data_point['dataset'] == 'convfinqa':
-            ins = create_reader_request_processed_convfinqa(data_point)
-        elif data_point['dataset'] == 'tatqa':
+        elif data_type == 'tatqa':
             ins = create_reader_request_processed_tatqa(data_point)
         else:
-            ins = create_reader_request_processed_finqa(data_point)
-        
+            ins = create_reader_request_processed_convfinqa(data_point)
         #ins = create_reader_request_processed_finqa(data_point)
         code = data_point["generated"][0]
         if '\nunits = ' in code:
